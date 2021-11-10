@@ -1,0 +1,19 @@
+.sidebar-box {
+    min-height: 84vh;
+    padding-top: 20px;
+}
+@media screen and (max-width: 769px) {
+    .sidebar-box {
+        min-height: auto;
+        padding: 10px 0px;
+    }
+    .sidebar-box ul li {
+        display: inline-block;
+    }
+    .sidebar-box .flex-column {
+        flex-direction: row !important;
+    }
+    .nav-link {
+        padding: 3px 10px;
+    }
+}
