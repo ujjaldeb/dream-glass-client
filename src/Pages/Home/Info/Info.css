@@ -1,0 +1,8 @@
+/* info section */
+.info-section{
+    height: 300px;
+}
+.info-box > .fas {
+    font-size: 36px;
+    color: #1954AF;
+}

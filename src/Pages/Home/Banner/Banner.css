@@ -1,0 +1,14 @@
+/* Banner section */
+.banner-section{
+    background: url(https://i.ibb.co/XtDWFQt/ethan-robertson-SYx3-UCHZJlo-unsplash.jpg);
+    background-color: rgba(30, 50, 87, 0.8); 
+    background-blend-mode:overlay; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+.banner-content h2{
+    font-size: 70px;
+    line-height: 84px;
+}

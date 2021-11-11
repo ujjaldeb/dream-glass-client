@@ -8,24 +8,24 @@ const Reviews = () => {
     const onSubmit = (data) => setResult(JSON.stringify(data));
 
     return (
-        <div class="col-lg-4 col-sm-12 mx-auto">
+        <div className="col-lg-4 col-sm-12 mx-auto">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <h1 class="h3 mb-3 fw-normal">Please write a review</h1>
+                <h1 className="h3 mb-3 fw-normal">Please write a review</h1>
 
-                <div class="form-floating mb-2">
-                    <input {...register("user_name", { required: true })} class="form-control" id="floatingInput" placeholder="User Name" />
-                    <label for="floatingInput">User Name</label>
+                <div className="form-floating mb-2">
+                    <input {...register("user_name", { required: true })} className="form-control" id="floatingInput" placeholder="User Name" />
+                    <label htmlFor="floatingInput">User Name</label>
                 </div>
-                <div class="form-floating mb-2">
-                    <input {...register("email")} class="form-control" id="floatingInput" placeholder="name@example.com" autocomplete="off" />
-                    <label for="floatingInput">Email address</label>
+                <div className="form-floating mb-2">
+                    <input {...register("email")} className="form-control" id="floatingInput" placeholder="name@example.com" autoComplete="off" />
+                    <label htmlFor="floatingInput">Email address</label>
                 </div>
-                <div class="form-floating mb-2">
+                <div className="form-floating mb-2">
                     <textarea {...register("user_reviews", { required: true })} placeholder="Product Description" id="product_description" className="form-control" />
-                    <label for="product_description">User Reviews</label>
+                    <label htmlFor="product_description">User Reviews</label>
                 </div>
 
-                <div class="form-floating mb-2">
+                <div className="form-floating mb-2">
                     <select {...register("Select User ", { required: true })} className="form-control">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -35,7 +35,7 @@ const Reviews = () => {
                     </select>
                 </div>
 
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+                <button className="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
                 <p>{result}</p>
             </form>
         </div>
