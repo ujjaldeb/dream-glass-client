@@ -1,0 +1,17 @@
+/* footer */
+footer {
+    background-color: #081828;
+    columns: #fff;
+}
+.copyright{
+    color: #fff;
+}
+.copyright a {
+    text-decoration: none;
+}
+.copyright p{
+    margin: 0px;
+}
+.payment-gateway{
+    color: #fff;
+}

@@ -115,3 +115,7 @@ footer {
 .payment-gateway{
     color: #fff;
 }
+
+.login-box{
+    min-height: 80vh;
+}
