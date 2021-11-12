@@ -6,3 +6,8 @@
     font-size: 36px;
     color: #1954AF;
 }
+@media screen and (max-width: 769px) {
+    .info-section {
+        height: 584px;
+    }
+  }

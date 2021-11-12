@@ -1,18 +1,17 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 
 const Register = () => {
   const { registerUser } = useAuth();
 
   const { register, handleSubmit, reset } = useForm();
+  const history = useHistory();
 
   const onSubmit = (data) => {
-  
-
     if (data.password === data.password2) {
-      console.log("click");
+      registerUser(data.email, data.password, data.name, history);
       reset();
     } else {
       alert("Password didn't match");
@@ -34,7 +33,6 @@ const Register = () => {
                   className="form-control"
                   id="floatingInputName"
                   placeholder="Your UserName"
-                  autoComplete="off"
                 />
                 <label htmlFor="floatingInput">Your UserName</label>
               </div>
@@ -72,8 +70,8 @@ const Register = () => {
                 <label htmlFor="floatingPassword">Confirm Your Password</label>
               </div>
 
-              <button className="w-100 btn btn-lg btn-primary" type="submit">
-                Sign in
+              <button className="w-100 btn btn-lg btn-primary mb-3" type="submit">
+                Register
               </button>
 
               <p>

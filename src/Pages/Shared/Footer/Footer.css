@@ -1,17 +1,25 @@
 /* footer */
 footer {
-    background-color: #081828;
-    columns: #fff;
+  background-color: #081828;
+  columns: #fff;
 }
-.copyright{
-    color: #fff;
+.copyright {
+  color: #fff;
 }
 .copyright a {
-    text-decoration: none;
+  text-decoration: none;
 }
-.copyright p{
-    margin: 0px;
+.copyright p {
+  margin: 0px;
 }
-.payment-gateway{
+.payment-gateway {
+  color: #fff;
+}
+
+@media screen and (max-width: 769px) {
+  .copyright {
     color: #fff;
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
 }

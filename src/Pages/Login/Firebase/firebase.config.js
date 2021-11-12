@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBo7ym_TwMj82MpxmLe1T7yW8OwB8XDmbE",
-  authDomain: "dream-glass.firebaseapp.com",
-  projectId: "dream-glass",
-  storageBucket: "dream-glass.appspot.com",
-  messagingSenderId: "1054935309566",
-  appId: "1:1054935309566:web:21485a06513d6353c7d9af"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 export default firebaseConfig;
