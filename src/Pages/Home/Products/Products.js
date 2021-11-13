@@ -1,10 +1,13 @@
 import React from "react";
 import useGetData from "../../../Hooks/useGetData";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Products.css";
 
 const Products = () => {
-  const [getData] = useGetData("http://localhost:5000/products");
+  const [getData] = useGetData(`http://localhost:5000/products`);
+
+  const location = useLocation();
+  const newProducts = (location.pathname !== '/shop') ? getData.slice(0, 6) : getData.slice(0);
 
   return (
     // product section
@@ -16,7 +19,7 @@ const Products = () => {
           </div>
         </div>
         <div className="row">
-          {!getData.length ? (
+          {!newProducts.length ? (
             <>
               <div className="container">
                 <div className="row">
@@ -30,7 +33,7 @@ const Products = () => {
             </>
           ) : (
             <>
-              {getData.map((product) => (
+              {newProducts.map((product) => (
                 <div key={product._id} className="col-lg-4 col-md-6 col-12">
                   <div className="single-product">
                     <div className="product-image">

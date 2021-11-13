@@ -34,18 +34,18 @@ const MyOrders = () => {
           </div>
         </div>
       </div>
-      <div className="row g-1 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+      <div className="row g-1 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-2">
         {!getData.length ? (
           <>
             <div className="container">
               <div className="row">
                 <div className="col-lg-12 mx-auto">
-                  <h3>You don't have any order.</h3>
+                  <h5>You don't have any order.</h5>
                   <Link to='/shop'>
                     <button
                       className="w-100 btn btn-lg btn-primary mb-2"
                     >
-                      Buy Product
+                      Buy Now
                     </button>
                   </Link>
                 </div>
@@ -56,16 +56,18 @@ const MyOrders = () => {
           <>
             {getData.map((order) => (
               <div key={order._id} className="col d-flex align-items-start">
-                <div className="shadow-sm p-3 border">
-                  <h4 className="fw-bold mb-0">{order.product_name}</h4>
-                  <p>Order Price: ${order.price}</p>
-                  <p>Order Status: {order.status}</p>
-                  <p>Phone Number: {order.phone}</p>
+                <div className="shadow-sm p-4 border">
+                  <h4 className="fw-bold mb-3">{order.product_name}</h4>
+                  <p>
+                    <span>Order Price: ${order.price}</span><br />
+                    <span>Order Status: {order.status}</span><br />
+                    <span>Phone Number: {order.phone}</span>
+                  </p>
                   <button
                     onClick={() => orderDeleteHandle(order._id)}
                     className="btn btn-warning"
                   >
-                    Order Delete
+                    Delete Order
                   </button>
                 </div>
               </div>

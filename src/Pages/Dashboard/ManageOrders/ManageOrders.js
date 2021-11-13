@@ -100,14 +100,14 @@ const ManageOrders = () => {
                       style={{ marginRight: "6px" }}
                       id={`update_btn_${order._id}`}
                     >
-                      Order Update
+                      Update Order
                     </button>
                   )}
                   <button
                     onClick={() => orderDeleteHandle(order._id)}
                     className="btn btn-warning"
                   >
-                    Order Delete
+                    Delete Order
                   </button>
                 </div>
               </div>

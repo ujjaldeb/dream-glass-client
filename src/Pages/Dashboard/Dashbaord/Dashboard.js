@@ -55,7 +55,7 @@ const Dashboard = () => {
                   </li>
                   <li>
                     <Link to={`${url}/reviews`} className="nav-link">
-                      Reviews
+                      Write a Review
                     </Link>
                   </li>
                   <li>

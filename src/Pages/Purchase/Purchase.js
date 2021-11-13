@@ -8,13 +8,13 @@ import useGetData from "../../Hooks/useGetData";
 const Purchase = () => {
   const { pid } = useParams();
   const { register, handleSubmit, reset } = useForm();
-
   const { user } = useAuth();
 
   const [getData] = useGetData(`http://localhost:5000/products/${pid}`);
 
   // single service destructuring
   const { product_name, productPrice } = getData;
+  // console.log(getData);
 
   //console.log(getData);
 

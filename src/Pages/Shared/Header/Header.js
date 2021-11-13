@@ -10,7 +10,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            ShopGrids
+            The Dream Car
           </Link>
           <button
             className="navbar-toggler"
@@ -60,7 +60,7 @@ const Header = () => {
                       type="button"
                       className="btn btn-link text-decoration-none"
                     >
-                      {user?.displayName.toUpperCase()}
+                      {user?.displayName?.toUpperCase()}
                     </button>
                   </li>
                   <li className="nav-item">

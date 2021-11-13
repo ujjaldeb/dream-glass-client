@@ -24,12 +24,12 @@ const ManageProducts = () => {
   return (
     <div className="container">
       <div className="row">
-          <div className="col-12">
-            <div className="section-title">
-              <h2>Manage Products</h2>
-            </div>
+        <div className="col-12">
+          <div className="section-title">
+            <h2>Manage Products</h2>
           </div>
         </div>
+      </div>
       <div className="row g-1 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
         {!getData.length ? (
           <>
@@ -48,13 +48,13 @@ const ManageProducts = () => {
             {getData.map((product) => (
               <div key={product._id} className="col d-flex align-items-start">
                 <div className="shadow-sm p-3 border">
-                  <h4 className="fw-bold mb-0">{product.product_name}</h4>
+                  <h4 className="fw-bold mb-3">{product.product_name}</h4>
                   <p>{product.product_description}</p>
                   <button
                     onClick={() => productDeleteHandle(product._id)}
                     className="btn btn-warning"
                   >
-                    Order Delete
+                    Delete
                   </button>
                 </div>
               </div>
