@@ -8,7 +8,7 @@ const ReviewForm = () => {
   const { user } = useAuth();
 
   const onReviewSubmit = (data) => {
-    axios.post("http://localhost:5000/reviews", data).then((res) => {
+    axios.post("https://afternoon-basin-48392.herokuapp.com/reviews", data).then((res) => {
       if (res.data.insertedId) {
         alert("Review Added Successfully");
         reset();

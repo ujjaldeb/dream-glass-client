@@ -5,14 +5,14 @@ import useGetData from "../../../Hooks/useGetData";
 
 const MakeAdmin = () => {
   const { register, handleSubmit, reset } = useForm();
-  const [getData] = useGetData("http://localhost:5000/users");
+  const [getData] = useGetData("https://afternoon-basin-48392.herokuapp.com/users");
 
   //const {user} = useAuth();
 
   const onSubmit = (data) => {
 
     if (window.confirm("Do you want to make Admin?")) {
-      fetch(`http://localhost:5000/users/${data.admin_email}`, {
+      fetch(`https://afternoon-basin-48392.herokuapp.com/users/${data.admin_email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

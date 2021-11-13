@@ -2,11 +2,11 @@ import React from "react";
 import useGetData from "../../../Hooks/useGetData";
 
 const ManageProducts = () => {
-  const [getData, setGetData] = useGetData("http://localhost:5000/products");
+  const [getData, setGetData] = useGetData("https://afternoon-basin-48392.herokuapp.com/products");
 
   const productDeleteHandle = (id) => {
     if (window.confirm("Do you want to delete?")) {
-      fetch(`http://localhost:5000/products/${id}`, {
+      fetch(`https://afternoon-basin-48392.herokuapp.com/products/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

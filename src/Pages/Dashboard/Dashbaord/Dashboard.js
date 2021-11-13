@@ -13,7 +13,7 @@ import ReviewForm from "./ReviewForm/ReviewForm";
 
 const Dashboard = () => {
   const { user, logOut } = useAuth();
-  const [getdata] = useGetData(`http://localhost:5000/users/${user.email}`);
+  const [getdata] = useGetData(`https://afternoon-basin-48392.herokuapp.com/users/${user.email}`);
   //console.log(getdata?.role);
   const { path, url } = useRouteMatch();
 

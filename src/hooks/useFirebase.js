@@ -16,7 +16,7 @@ const useFirebase = () => {
   const [authError, setAuthError] = useState("");
   const [loading, setloading] = useState(true);
   const auth = getAuth();
-  
+
   // User Register method
   const registerUser = (email, password, name, history) => {
     setloading(true);
@@ -94,7 +94,7 @@ const useFirebase = () => {
   // save user to database
   const saveUser = (email, displayName, role) => {
     const user = { email, displayName, role: role };
-    fetch("http://localhost:5000/users", {
+    fetch("https://afternoon-basin-48392.herokuapp.com/users", {
       method: 'POST',
       headers: {
         "content-type": "application/json",
@@ -104,7 +104,7 @@ const useFirebase = () => {
   };
 
 
-  
+
 
   return {
     registerUser,

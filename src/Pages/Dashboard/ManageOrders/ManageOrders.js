@@ -3,11 +3,11 @@ import useGetData from "../../../Hooks/useGetData";
 import './ManageOrders.css';
 
 const ManageOrders = () => {
-  const [getData, setGetData] = useGetData("http://localhost:5000/orders");
+  const [getData, setGetData] = useGetData("https://afternoon-basin-48392.herokuapp.com/orders");
 
   const orderDeleteHandle = (id) => {
     if (window.confirm("Do you want to delete?")) {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://afternoon-basin-48392.herokuapp.com/orders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -29,7 +29,7 @@ const ManageOrders = () => {
       document.getElementById(uid).style.display = "inline-block";
       document.getElementById(sid).innerText = "Pending";
 
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://afternoon-basin-48392.herokuapp.com/orders/${id}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

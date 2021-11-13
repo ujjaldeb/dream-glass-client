@@ -3,7 +3,7 @@ import useGetData from "../../../Hooks/useGetData";
 import "./Reviews.css";
 
 const Reviews = () => {
-  const [getData] = useGetData("http://localhost:5000/reviews");
+  const [getData] = useGetData("https://afternoon-basin-48392.herokuapp.com/reviews");
 
   return (
     // review section
@@ -11,7 +11,7 @@ const Reviews = () => {
       <div className="container px-4 py-5" id="icon-grid">
         <div className="row">
           <div className="col-12">
-              <h2 className='mb-3' >What Our Client Say</h2>
+            <h2 className='mb-3' >What Our Client Say</h2>
           </div>
         </div>
         <div className="row g-1 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">

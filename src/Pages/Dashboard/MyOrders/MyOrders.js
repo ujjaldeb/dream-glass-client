@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 const MyOrders = () => {
   const { user } = useAuth();
   const [getData, setGetData] = useGetData(
-    `http://localhost:5000/orders/${user.email}`
+    `https://afternoon-basin-48392.herokuapp.com/orders/${user.email}`
   );
 
   const orderDeleteHandle = (id) => {
     if (window.confirm("Do you want to delete?")) {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://afternoon-basin-48392.herokuapp.com/orders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

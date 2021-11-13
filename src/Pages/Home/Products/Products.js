@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./Products.css";
 
 const Products = () => {
-  const [getData] = useGetData(`http://localhost:5000/products`);
+  const [getData] = useGetData(`https://afternoon-basin-48392.herokuapp.com/products`);
 
   const location = useLocation();
   const newProducts = (location.pathname !== '/shop') ? getData.slice(0, 6) : getData.slice(0);
