@@ -9,8 +9,7 @@ const Footer = () => {
                 <div className="row p-3">
                     <div className="col-lg-6 col-12 d-flex align-items-center">
                         <div className="copyright">
-                            <p>Designed and Developed by <Link to="https://onlytarikul.com/" target='_blank'>Ujjal Deb</Link>
-                            </p>
+                            <p>Designed and Developed by <Link to="/" target='_blank'>Ujjal Deb</Link></p>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 text-end">
