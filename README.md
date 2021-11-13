@@ -1,6 +1,6 @@
 # Getting Started with The Dream Car
 
-Live link of the website [The Dream Car](https://github.com/facebook/create-react-app).
+Live link of the website [The Dream Car](https://dream-glass.web.app/).
 
 ## Overview of the project
 
