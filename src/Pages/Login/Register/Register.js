@@ -24,7 +24,7 @@ const Register = () => {
         <div className="row">
           <div className="col-lg-4 col-sm-12 mx-auto">
             <form onSubmit={handleSubmit(onSubmit)}>
-              <h1 className="mb-5">ShopGrids</h1>
+              <h1 className="mb-5">The Dream Car</h1>
               <h1 className="h3 mb-3 fw-normal">Please Register</h1>
 
               <div className="form-floating mb-2">
